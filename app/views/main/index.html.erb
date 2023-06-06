@@ -1,3 +1,10 @@
 <div class="d-flex align-items-center justify-content-center">
   <h1>Welcome to Tweet Sendler App</h1>
 </div>
+
+<div>
+  <% if @user%>
+    Logged in as: <%= @user.email %>
+    <%= button_to "loggout", logout_path, method: :delete %>
+  <% end %>
+</div>
